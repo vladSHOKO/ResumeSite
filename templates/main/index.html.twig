@@ -1,0 +1,195 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Resume{% endblock %}
+
+{% block body %}
+    <header>
+        <div class="container">
+            <img src="{{ asset('uploads/myPhoto.jpg') }}" alt="Фото Кузьминова Владислава" class="profile-img">
+            <h1>Кузьминов Владислав</h1>
+            <div class="tagline">Junior PHP-разработчик</div>
+
+            <div class="social-links">
+                <a href="https://github.com/vladSHOKO"><i class="fab fa-github"></i></a>
+                <a href="https://t.me/vladislavKuzminov2000"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="card">
+                <h2>Обо мне</h2>
+                <p>PHP-разработчик с глубокими знаниями в веб-технологиях. Специализируюсь на Symfony, Bitrix и чистом PHP. Умею не только писать качественный код, но и проектировать архитектуру приложений, оптимизировать производительность и внедрять лучшие практики разработки.</p>
+            </section>
+
+            <div class="grid">
+                <section class="card">
+                    <h2>Опыт работы</h2>
+
+                    <div class="experience-item">
+                        <h3>PHP-разработчик в интеграторе Битрикса</h3>
+                        <div class="company">McArt</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> Сентябрь 2025 — настоящее время</div>
+                        <ul>
+                            <li>Разработка и поддержка высоконагруженного SaaS-приложения на Laravel</li>
+                            <li>Оптимизация производительности API (снижение времени ответа на 40%)</li>
+                            <li>Внедрение CI/CD процессов и автоматизированного тестирования</li>
+                            <li>Руководство командой из 5 разработчиков</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3>PHP-разработчик</h3>
+                        <div class="company">WebArt Labs</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> Март 2016 — Декабрь 2019</div>
+                        <ul>
+                            <li>Разработка кастомных CMS для клиентов агентства</li>
+                            <li>Интеграция платежных систем и API сервисов</li>
+                            <li>Рефакторинг legacy-кода с повышением производительности на 60%</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>Навыки</h2>
+
+                    <h3>Технические навыки</h3>
+                    <div class="skills">
+                        <div class="skill php">PHP 8.0+</div>
+                        <div class="skill laravel">Laravel</div>
+                        <div class="skill">Symfony</div>
+                        <div class="skill mysql">MySQL</div>
+                        <div class="skill">PostgreSQL</div>
+                        <div class="skill">Redis</div>
+                        <div class="skill">Elasticsearch</div>
+                        <div class="skill js">JavaScript</div>
+                        <div class="skill">Vue.js</div>
+                        <div class="skill">Docker</div>
+                        <div class="skill">Git</div>
+                        <div class="skill">REST API</div>
+                        <div class="skill">GraphQL</div>
+                        <div class="skill">Microservices</div>
+                    </div>
+
+                    <h3>Профессиональные качества</h3>
+                    <ul>
+                        <li>Глубокое понимание ООП и паттернов проектирования</li>
+                        <li>Опыт работы с высоконагруженными системами</li>
+                        <li>Знание принципов SOLID, DRY, KISS</li>
+                        <li>Умение писать чистый, поддерживаемый код</li>
+                        <li>Опыт рефакторинга legacy-кода</li>
+                        <li>Знание принципов тестирования (Unit, Feature, Integration tests)</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="grid">
+                <section class="card">
+                    <h2>Образование</h2>
+
+                    <div class="education-item">
+                        <h3>Магистр компьютерных наук</h3>
+                        <div class="institution">Национальный технический университет</div>
+                        <div class="date"><i class="far fa-calendar-alt"></i> 2010 — 2015</div>
+                    </div>
+
+                    <h3>Сертификаты</h3>
+                    <ul>
+                        <li>Zend Certified PHP Engineer</li>
+                        <li>Laravel Certified Developer</li>
+                        <li>AWS Certified Developer - Associate</li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>Контакты</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ivan.ivanov@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (123) 456-78-90</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Москва, Россия</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/ivanivanov</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/ivanivanov</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section class="card">
+                <h2>Проекты</h2>
+
+                <div class="experience-item">
+                    <h3>Система управления контентом для медиа-холдинга</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> 2022</div>
+                    <p>Разработка высоконагруженной CMS для крупного медиа-холдинга с возможностью обработки более 10 000 запросов в минуту. Использовался Laravel, Redis для кэширования, Elasticsearch для поиска и микросервисная архитектура.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Платформа для электронной коммерции</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> 2020-2021</div>
+                    <p>Полнофункциональная платформа для интернет-магазина с интеграцией 10+ платежных систем, системой рекомендаций и аналитики. Реализована на Symfony с использованием RabbitMQ для асинхронных задач.</p>
+                </div>
+            </section>
+        </div>
+        <div class="card">
+            <h2>Связаться со мной</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" required class="form-control">
+                    <i class="fas fa-user form-icon"></i>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required class="form-control">
+                    <i class="fas fa-envelope form-icon"></i>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Тема</label>
+                    <select id="subject" name="subject" class="form-control">
+                        <option value="job">Предложение работы</option>
+                        <option value="project">Обсуждение проекта</option>
+                        <option value="question">Технический вопрос</option>
+                        <option value="other">Другое</option>
+                    </select>
+                    <i class="fas fa-tag form-icon"></i>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" rows="5" required class="form-control"></textarea>
+
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Отправить
+                    </button>
+                    <div class="form-note">Я отвечаю в течение 1-2 рабочих дней</div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2025 Кузьминов Владислав. Все права защищены.
+        </div>
+    </footer>
+{% endblock %}

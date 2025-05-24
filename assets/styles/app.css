@@ -1,0 +1,319 @@
+body {
+    background-color: skyblue;
+}
+
+:root {
+    --primary: #6181b6;
+    --primary-dark: #4a6da7;
+    --primary-light: #889ccf;
+    --secondary: #777bb3;
+    --text: #333;
+    --text-light: #666;
+    --bg: #f8f9fa;
+    --card-bg: #fff;
+    --border: #e1e4e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 60px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "<?php ?>";
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 120px;
+    opacity: 0.1;
+    color: white;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+main {
+    padding: 40px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-top: 3px solid var(--primary);
+}
+
+h2 {
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-light);
+}
+
+h3 {
+    color: var(--primary);
+    margin: 15px 0 10px;
+    font-size: 1.3rem;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px dashed var(--border);
+}
+
+.experience-item:last-child, .education-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.date {
+    color: var(--primary-light);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.date i {
+    margin-right: 8px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill {
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.skill.php {
+    background: #777bb3;
+}
+
+.skill.laravel {
+    background: #ff2d20;
+}
+
+.skill.mysql {
+    background: #00758f;
+}
+
+.skill.js {
+    background: #f7df1e;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-item i {
+    width: 30px;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: var(--primary-dark);
+    color: white;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 40px 0 60px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(97, 129, 182, 0.2);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-icon {
+    position: absolute;
+    left: 15px;
+    top: 40px;
+    color: var(--primary-light);
+    font-size: 1rem;
+}
+
+.textarea-icon {
+    top: 18px;
+}
+
+.submit-btn {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, var(--primary-dark), var(--secondary));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Стили для select */
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236181b6'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+}
