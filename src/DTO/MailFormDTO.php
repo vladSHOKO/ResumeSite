@@ -23,6 +23,7 @@ class MailFormDTO
         $this->senderEmail = $to;
         $this->subject = $subject;
         $this->message = $message;
+        $this->senderName = $senderName;
     }
 
 }

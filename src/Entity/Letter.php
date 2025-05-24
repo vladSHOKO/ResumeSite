@@ -34,6 +34,10 @@ class Letter
 
     public function __construct(string $senderName, string $senderEmail, string $subject, string $message)
     {
+        $this->senderName = $senderName;
+        $this->senderEmail = $senderEmail;
+        $this->subject = $subject;
+        $this->message = $message;
     }
 
     public function getId(): ?int
