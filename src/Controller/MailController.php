@@ -30,6 +30,6 @@ final class MailController extends AbstractController
             return new Response($e->getMessage(), Response::HTTP_INTERNAL_SERVER_ERROR);
         }
 
-        return new Response('Письмо успешно отправлено!', Response::HTTP_OK);
+        return new Response(json_encode('Письмо успешно отправлено!'), Response::HTTP_OK);
     }
 }

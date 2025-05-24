@@ -21,8 +21,8 @@ form.addEventListener('submit', function (event) {
         })
     })
         .then(response => response.json())
-        .then(data => console.log('Ответ сервера:', data))
-        .catch(error => console.error('Ошибка:', error));
+        .then(data => alert('Ответ сервера: ' + data))
+        .catch(error => alert('Ошибка: '+ error));
 
     event.target.reset();
 })
