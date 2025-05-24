@@ -24,9 +24,9 @@ class MailerService
     {
         $email = (new Email())
             ->from('vladislavkuzminov111@gamail.com')
-            ->to($formDTO->to)
+            ->to($formDTO->senderEmail)
             ->subject('Обратная связь')
-            ->text('Здравствуйте! Я отвечу вам в течение некоторого времени! Если хотите ускорить процесс пишите в телеграм https://t.me/vladislavKuzminov2000');
+            ->text('Здравствуйте, ' . $formDTO->senderName . '! Я отвечу вам в течение некоторого времени! Если хотите ускорить процесс пишите в телеграм https://t.me/vladislavKuzminov2000');
 
         $this->mailer->send($email);
     }

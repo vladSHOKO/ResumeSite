@@ -7,7 +7,7 @@ class MailFormDTO
 {
     #[Assert\NotBlank]
     #[Assert\Email]
-    public string $to;
+    public string $senderEmail;
 
     #[Assert\NotBlank]
     public string $subject;
@@ -15,11 +15,15 @@ class MailFormDTO
     #[Assert\NotBlank]
     public string $message;
 
-    public function __construct(string $to, string $subject, string $message)
+    #[Assert\NotBlank]
+    public string $senderName;
+
+    public function __construct(string $to, string $subject, string $message, string $senderName)
     {
-        $this->to = $to;
+        $this->senderEmail = $to;
         $this->subject = $subject;
         $this->message = $message;
+        $this->senderName = $senderName;
     }
 
 }
