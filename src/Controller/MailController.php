@@ -15,18 +15,28 @@ use Symfony\Component\Serializer\SerializerInterface;
 
 final class MailController extends AbstractController
 {
+    private LetterRepository $letterRepository;
+    private SerializerInterface $serializer;
+
+    public function __construct(LetterRepository $letterRepository, SerializerInterface $serializer)
+    {
+        $this->letterRepository = $letterRepository;
+        $this->serializer = $serializer;
+    }
+
     #[Route('/send/mail', name: 'app_mail', methods: ['POST'])]
-    public function index(Request $request, MailerInterface $mailer, LetterRepository $letterRepository, SerializerInterface $serializer): Response
+    public function index(Request $request, MailerInterface $mailer): Response
     {
 
         try {
             $data = json_decode($request->getContent(), true);
 
-            $formDTO = $serializer->denormalize($data, MailDTO::class, 'json');
+            $formDTO = $this->serializer->denormalize($data, MailDTO::class, 'json');
 
-            $letterRepository->saveLetter($formDTO);
+            $this->letterRepository->saveLetter($formDTO);
 
             $mailerService = new MailerService($mailer, $formDTO);
+
             $mailerService->replyLetter();
         } catch (TransportExceptionInterface $e) {
             return new Response($e->getMessage(), Response::HTTP_INTERNAL_SERVER_ERROR);
