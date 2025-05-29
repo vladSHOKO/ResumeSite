@@ -3,11 +3,11 @@
 namespace App\DTO;
 
 use Symfony\Component\Validator\Constraints as Assert;
-class MailFormDTO
+class MailDTO
 {
     #[Assert\NotBlank]
     #[Assert\Email]
-    public string $senderEmail;
+    public string $email;
 
     #[Assert\NotBlank]
     public string $subject;
@@ -18,12 +18,12 @@ class MailFormDTO
     #[Assert\NotBlank]
     public string $senderName;
 
-    public function __construct(string $to, string $subject, string $message, string $senderName)
+    public function __construct(string $email, string $subject, string $message, string $name)
     {
-        $this->senderEmail = $to;
+        $this->email = $email;
         $this->subject = $subject;
         $this->message = $message;
-        $this->senderName = $senderName;
+        $this->senderName = $name;
     }
 
 }
