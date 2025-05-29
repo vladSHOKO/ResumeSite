@@ -1,195 +1,337 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Resume{% endblock %}
+{% block title %}Кузьминов Владислав{% endblock %}
 
 {% block body %}
     <header>
         <div class="container">
-            <img src="{{ asset('uploads/myPhoto.jpg') }}" alt="Фото Кузьминова Владислава" class="profile-img">
-            <h1>Кузьминов Владислав</h1>
-            <div class="tagline">Junior PHP-разработчик</div>
-
+            <div class="avatar-container">
+                <div class="avatar-border"></div>
+                <img src="{{ asset('uploads/myPhoto.jpg') }}" alt="Фото профиля" class="avatar">
+            </div>
+            <br>
+            <h1>Владислав Кузьминов</h1>
+            <p class="subtitle">Junior PHP Developer</p>
             <div class="social-links">
-                <a href="https://github.com/vladSHOKO"><i class="fab fa-github"></i></a>
-                <a href="https://t.me/vladislavKuzminov2000"><i class="fab fa-telegram"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="{{ asset('uploads/MyResume.pdf') }}" title="Резюме PDF"><i class="fas fa-file-pdf"></i></a>
             </div>
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <section class="card">
-                <h2>Обо мне</h2>
-                <p>PHP-разработчик с глубокими знаниями в веб-технологиях. Специализируюсь на Symfony, Bitrix и чистом PHP. Умею не только писать качественный код, но и проектировать архитектуру приложений, оптимизировать производительность и внедрять лучшие практики разработки.</p>
+    <div class="container">
+        <div class="grid-layout">
+            <!-- Обо мне -->
+            <section class="span-6">
+                <h2><i class="fas fa-user-astronaut"></i> Обо мне</h2>
+                <p>Креативный и увлеченный PHP-разработчик с более чем 5-летним опытом создания сложных веб-приложений. Специализируюсь на высоконагруженных системах и архитектуре веб-приложений.</p>
+                <p>Постоянно изучаю новые технологии и подходы к разработке. Уверен, что хороший код — это не только функциональность, но и элегантность решения.</p>
+                <div class="meta" style="margin-top: 1.5rem;">
+                    <span><i class="fas fa-map-marker-alt"></i> Город, Страна</span>
+                    <span><i class="fas fa-language"></i> Английский (B2)</span>
+                </div>
             </section>
 
-            <div class="grid">
-                <section class="card">
-                    <h2>Опыт работы</h2>
-
-                    <div class="experience-item">
-                        <h3>PHP-разработчик в интеграторе Битрикса</h3>
-                        <div class="company">McArt</div>
-                        <div class="date"><i class="far fa-calendar-alt"></i> Сентябрь 2025 — настоящее время</div>
-                        <ul>
-                            <li>Разработка и поддержка высоконагруженного SaaS-приложения на Laravel</li>
-                            <li>Оптимизация производительности API (снижение времени ответа на 40%)</li>
-                            <li>Внедрение CI/CD процессов и автоматизированного тестирования</li>
-                            <li>Руководство командой из 5 разработчиков</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <h3>PHP-разработчик</h3>
-                        <div class="company">WebArt Labs</div>
-                        <div class="date"><i class="far fa-calendar-alt"></i> Март 2016 — Декабрь 2019</div>
-                        <ul>
-                            <li>Разработка кастомных CMS для клиентов агентства</li>
-                            <li>Интеграция платежных систем и API сервисов</li>
-                            <li>Рефакторинг legacy-кода с повышением производительности на 60%</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="card">
-                    <h2>Навыки</h2>
-
-                    <h3>Технические навыки</h3>
-                    <div class="skills">
-                        <div class="skill php">PHP 8.0+</div>
-                        <div class="skill laravel">Laravel</div>
-                        <div class="skill">Symfony</div>
-                        <div class="skill mysql">MySQL</div>
-                        <div class="skill">PostgreSQL</div>
-                        <div class="skill">Redis</div>
-                        <div class="skill">Elasticsearch</div>
-                        <div class="skill js">JavaScript</div>
-                        <div class="skill">Vue.js</div>
-                        <div class="skill">Docker</div>
-                        <div class="skill">Git</div>
-                        <div class="skill">REST API</div>
-                        <div class="skill">GraphQL</div>
-                        <div class="skill">Microservices</div>
-                    </div>
-
-                    <h3>Профессиональные качества</h3>
-                    <ul>
-                        <li>Глубокое понимание ООП и паттернов проектирования</li>
-                        <li>Опыт работы с высоконагруженными системами</li>
-                        <li>Знание принципов SOLID, DRY, KISS</li>
-                        <li>Умение писать чистый, поддерживаемый код</li>
-                        <li>Опыт рефакторинга legacy-кода</li>
-                        <li>Знание принципов тестирования (Unit, Feature, Integration tests)</li>
-                    </ul>
-                </section>
-            </div>
-
-            <div class="grid">
-                <section class="card">
-                    <h2>Образование</h2>
-
-                    <div class="education-item">
-                        <h3>Магистр компьютерных наук</h3>
-                        <div class="institution">Национальный технический университет</div>
-                        <div class="date"><i class="far fa-calendar-alt"></i> 2010 — 2015</div>
-                    </div>
-
-                    <h3>Сертификаты</h3>
-                    <ul>
-                        <li>Zend Certified PHP Engineer</li>
-                        <li>Laravel Certified Developer</li>
-                        <li>AWS Certified Developer - Associate</li>
-                    </ul>
-                </section>
-
-                <section class="card">
-                    <h2>Контакты</h2>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>ivan.ivanov@example.com</span>
+            <!-- Основные навыки -->
+            <section class="span-6">
+                <h2><i class="fas fa-star"></i> Ключевые навыки</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4><i class="fab fa-php"></i> PHP & Фреймворки</h4>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>PHP 8+</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%;"></div>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+7 (123) 456-78-90</span>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Laravel</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%;"></div>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Москва, Россия</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <span>github.com/ivanivanov</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <span>linkedin.com/in/ivanivanov</span>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Symfony</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%;"></div>
+                            </div>
                         </div>
                     </div>
-                </section>
-            </div>
 
-            <section class="card">
-                <h2>Проекты</h2>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-database"></i> Базы данных</h4>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>MySQL</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>PostgreSQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Redis</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Опыт работы -->
+            <section class="span-12">
+                <h2><i class="fas fa-briefcase"></i> Опыт работы</h2>
 
                 <div class="experience-item">
-                    <h3>Система управления контентом для медиа-холдинга</h3>
-                    <div class="date"><i class="far fa-calendar-alt"></i> 2022</div>
-                    <p>Разработка высоконагруженной CMS для крупного медиа-холдинга с возможностью обработки более 10 000 запросов в минуту. Использовался Laravel, Redis для кэширования, Elasticsearch для поиска и микросервисная архитектура.</p>
+                    <h3>Lead PHP Developer</h3>
+                    <div class="meta">
+                        <span><i class="fas fa-building"></i> ТехноСофт</span>
+                        <span><i class="far fa-calendar-alt"></i> 2021 - настоящее время</span>
+                    </div>
+                    <ul>
+                        <li>Руководство командой из 5 разработчиков в создании масштабируемого SaaS-решения</li>
+                        <li>Архитектура и реализация микросервисной системы с использованием Docker и Kubernetes</li>
+                        <li>Оптимизация производительности API, сокращение времени ответа на 60%</li>
+                        <li>Внедрение процессов CI/CD и автоматического тестирования</li>
+                    </ul>
                 </div>
 
                 <div class="experience-item">
-                    <h3>Платформа для электронной коммерции</h3>
-                    <div class="date"><i class="far fa-calendar-alt"></i> 2020-2021</div>
-                    <p>Полнофункциональная платформа для интернет-магазина с интеграцией 10+ платежных систем, системой рекомендаций и аналитики. Реализована на Symfony с использованием RabbitMQ для асинхронных задач.</p>
+                    <h3>Senior PHP Developer</h3>
+                    <div class="meta">
+                        <span><i class="fas fa-building"></i> ВебАгентство ПРО</span>
+                        <span><i class="far fa-calendar-alt"></i> 2018 - 2021</span>
+                    </div>
+                    <ul>
+                        <li>Разработка высоконагруженного API для мобильного приложения с 500k+ пользователей</li>
+                        <li>Реализация сложной бизнес-логики и интеграция с внешними сервисами</li>
+                        <li>Рефакторинг legacy-кода с улучшением производительности на 40%</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Проекты -->
+            <section class="span-12">
+                <h2><i class="fas fa-code"></i> Избранные проекты</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <!-- Здесь может быть изображение проекта -->
+                            <i class="fas fa-code" style="font-size: 3rem; color: var(--gray); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Образовательная платформа</h3>
+                            <p>Комплексная система дистанционного обучения с видео-лекциями, тестами и интерактивными заданиями.</p>
+                            <div class="project-tech">
+                                <span class="tech-item">Laravel</span>
+                                <span class="tech-item">Vue.js</span>
+                                <span class="tech-item">MySQL</span>
+                                <span class="tech-item">Redis</span>
+                                <span class="tech-item">Docker</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link link-primary"><i class="fas fa-external-link-alt"></i> Демо</a>
+                                <a href="#" class="project-link link-secondary"><i class="fab fa-github"></i> Код</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-chart-line" style="font-size: 3rem; color: var(--gray); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Аналитическая система</h3>
+                            <p>Платформа для анализа больших данных с интерактивными дашбордами и прогнозированием.</p>
+                            <div class="project-tech">
+                                <span class="tech-item">Symfony</span>
+                                <span class="tech-item">Python</span>
+                                <span class="tech-item">PostgreSQL</span>
+                                <span class="tech-item">RabbitMQ</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link link-primary"><i class="fas fa-external-link-alt"></i> Демо</a>
+                                <a href="#" class="project-link link-secondary"><i class="fas fa-book"></i> Документация</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-shopping-cart" style="font-size: 3rem; color: var(--gray); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-commerce API</h3>
+                            <p>Высоконагруженное API для интернет-магазина с поддержкой 1000+ запросов в секунду.</p>
+                            <div class="project-tech">
+                                <span class="tech-item">Laravel</span>
+                                <span class="tech-item">Swoole</span>
+                                <span class="tech-item">MongoDB</span>
+                                <span class="tech-item">Redis</span>
+                                <span class="tech-item">Kubernetes</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link link-secondary"><i class="fab fa-github"></i> Код</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Образование и сертификаты -->
+            <section class="span-6">
+                <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
+                <div class="experience-item">
+                    <h3>Магистр компьютерных наук</h3>
+                    <div class="meta">
+                        <span><i class="fas fa-university"></i> Национальный Технический Университет</span>
+                        <span><i class="far fa-calendar-alt"></i> 2016 - 2018</span>
+                    </div>
+                    <p>Специализация: Распределенные системы и веб-технологии</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Бакалавр программной инженерии</h3>
+                    <div class="meta">
+                        <span><i class="fas fa-university"></i> Государственный Университет</span>
+                        <span><i class="far fa-calendar-alt"></i> 2012 - 2016</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Дополнительные навыки -->
+            <section class="span-6">
+                <h2><i class="fas fa-tools"></i> Другие навыки</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code-branch"></i> Разработка</h4>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>JavaScript</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Docker</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Git</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4><i class="fas fa-globe"></i> Языки</h4>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Русский</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Английский</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
-        <div class="card">
-            <h2>Связаться со мной</h2>
-            <form id="contact-form" class="contact-form">
+    </div>
+    <div class="contact-container">
+        <div class="contact-card">
+            <div class="contact-header">
+                <h2><i class="fas fa-paper-plane"></i> Свяжитесь со мной</h2>
+                <p>Заполните форму ниже, и я отвечу вам в ближайшее время</p>
+            </div>
+
+            <form id="contact-form">
                 <div class="form-group">
                     <label for="name">Ваше имя</label>
-                    <input type="text" id="name" name="name" required class="form-control">
-                    <i class="fas fa-user form-icon"></i>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Как к вам обращаться?" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required class="form-control">
-                    <i class="fas fa-envelope form-icon"></i>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Ваш email для ответа" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="subject">Тема</label>
-                    <select id="subject" name="subject" class="form-control">
-                        <option value="job">Предложение работы</option>
-                        <option value="project">Обсуждение проекта</option>
-                        <option value="question">Технический вопрос</option>
-                        <option value="other">Другое</option>
-                    </select>
-                    <i class="fas fa-tag form-icon"></i>
+                    <label for="subject">Тема сообщения</label>
+                    <input type="text" id="subject" name="subject" class="form-control" placeholder="О чем вы хотите поговорить?">
                 </div>
 
                 <div class="form-group">
                     <label for="message">Сообщение</label>
-                    <textarea id="message" name="message" rows="5" required class="form-control"></textarea>
-
+                    <textarea id="message" name="message" class="form-control" placeholder="Опишите ваш вопрос или предложение..." required></textarea>
                 </div>
 
-                <div class="form-footer">
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> Отправить
-                    </button>
-                    <div class="form-note">Я отвечаю в течение 1-2 рабочих дней</div>
-                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Отправить сообщение
+                </button>
             </form>
-        </div>
-    </main>
 
+            <div class="form-footer">
+                <p>Или напишите мне напрямую: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="container">
-            &copy; 2025 Кузьминов Владислав. Все права защищены.
+            <p>Готов к новым вызовам и интересным проектам!</p>
+            <div class="contact-info">
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> your.email@example.com</a>
+                <a href="tel:+71234567890"><i class="fas fa-phone"></i> +7 (123) 456-78-90</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Город, Страна</a>
+            </div>
+            <p style="margin-top: 2rem;">© 2023 Ваше Имя. Все права защищены.</p>
         </div>
     </footer>
 {% endblock %}
+
