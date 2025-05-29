@@ -10,7 +10,15 @@
         {% endblock %}
 
         {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% block importmap %}
+            {% if app.request.attributes.get('_route') == 'app_registration' %}
+                {{ importmap('registration') }}
+            {% else %}
+                {{ importmap('app') }}
+            {% endif %}
+        {% endblock %}
+
+
         {% endblock %}
     </head>
     <body>

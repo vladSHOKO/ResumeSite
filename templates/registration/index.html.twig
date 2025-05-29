@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registration{% endblock %}
+
+{% block body %}
+    <div class="cosmic-registration">
+        <div class="cosmic-registration-bg"></div>
+
+        <div class="cosmic-registration-card">
+            <div class="cosmic-registration-header">
+                <div class="cosmic-avatar-container">
+                    <div class="cosmic-avatar-border"></div>
+                    <i class="fas fa-user-astronaut cosmic-avatar-icon"></i>
+                </div>
+                <h2>Присоединиться к <span class="cosmic-highlight">космическому</span> сообществу</h2>
+                <p>Создайте аккаунт и начните свое путешествие</p>
+            </div>
+
+            <form class="cosmic-registration-form">
+                <div class="cosmic-form-grid">
+                    <!-- Первая строка -->
+                    <div class="cosmic-form-group cosmic-float-animation">
+                        <div class="cosmic-input-container">
+                            <input type="text" id="cosmic-name" required>
+                            <label for="cosmic-name"><i class="fas fa-user"></i> Имя</label>
+                            <div class="cosmic-input-border"></div>
+                        </div>
+                    </div>
+
+                    <div class="cosmic-form-group cosmic-float-animation" style="animation-delay: 0.1s;">
+                        <div class="cosmic-input-container">
+                            <input type="text" id="cosmic-surname">
+                            <label for="cosmic-surname"><i class="fas fa-users"></i> Фамилия</label>
+                            <div class="cosmic-input-border"></div>
+                        </div>
+                    </div>
+
+                    <!-- Вторая строка -->
+                    <div class="cosmic-form-group cosmic-float-animation" style="animation-delay: 0.2s;">
+                        <div class="cosmic-input-container">
+                            <input type="email" id="cosmic-email" required>
+                            <label for="cosmic-email"><i class="fas fa-envelope"></i> Email</label>
+                            <div class="cosmic-input-border"></div>
+                        </div>
+                    </div>
+
+                    <div class="cosmic-form-group cosmic-float-animation" style="animation-delay: 0.3s;">
+                        <div class="cosmic-input-container">
+                            <input type="text" id="cosmic-username" required>
+                            <label for="cosmic-username"><i class="fas fa-at"></i> Логин</label>
+                            <div class="cosmic-input-border"></div>
+                        </div>
+                    </div>
+
+                    <!-- Третья строка -->
+                    <div class="cosmic-form-group cosmic-float-animation" style="animation-delay: 0.4s;">
+                        <div class="cosmic-input-container">
+                            <input type="password" id="cosmic-password" required>
+                            <label for="cosmic-password"><i class="fas fa-lock"></i> Пароль</label>
+                            <div class="cosmic-input-border"></div>
+                        </div>
+                    </div>
+
+                    <div class="cosmic-form-group cosmic-float-animation" style="animation-delay: 0.5s;">
+                        <div class="cosmic-input-container">
+                            <input type="password" id="cosmic-confirm" required>
+                            <label for="cosmic-confirm"><i class="fas fa-lock"></i> Подтверждение</label>
+                            <div class="cosmic-input-border"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cosmic-terms cosmic-float-animation" style="animation-delay: 0.6s;">
+                    <input type="checkbox" id="cosmic-terms">
+                    <label for="cosmic-terms">
+                        Я согласен с <a href="#">условиями использования</a> и <a href="#">политикой конфиденциальности</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="cosmic-submit-btn cosmic-pulse-animation">
+                    <i class="fas fa-rocket"></i>
+                    <span>Запустить регистрацию</span>
+                    <div class="cosmic-btn-border"></div>
+                </button>
+
+                <div class="cosmic-login-link">
+                    Уже есть аккаунт? <a href="#">Войти в систему</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
