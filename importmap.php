@@ -16,8 +16,4 @@ return [
         'path' => './assets/app.js',
         'entrypoint' => true,
     ],
-    'registration' =>[
-        'path' => './assets/registration.js',
-        'entrypoint' => true,
-    ]
 ];

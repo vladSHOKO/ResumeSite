@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Registration{% endblock %}
-
+{% block stylesheets %}
+    {{ encore_entry_link_tags('registration') }}
+{% endblock %}
 {% block body %}
     <div class="cosmic-registration">
         <div class="cosmic-registration-bg"></div>
@@ -61,7 +63,7 @@
                 </button>
 
                 <div class="cosmic-login-link">
-                    Уже есть аккаунт? <a href="#">Войти в систему</a>
+                    Уже есть аккаунт? <a href="{{ path('app_authorization') }}">Войти в систему</a>
                 </div>
             </form>
         </div>
