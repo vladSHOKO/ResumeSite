@@ -11,8 +11,6 @@ final class AuthorizationController extends AbstractController
     #[Route('/authorization', name: 'app_authorization')]
     public function index(): Response
     {
-        return $this->render('authorization/index.html.twig', [
-            'controller_name' => 'AuthorizationController',
-        ]);
+        return $this->render('authorization/index.html.twig');
     }
 }
