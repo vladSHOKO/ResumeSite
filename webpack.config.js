@@ -21,8 +21,9 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
+    .addEntry('registration', './assets/registration.js')
+
     .addStyleEntry('authorization', './assets/styles/authorizationForm.css')
-    .addStyleEntry('registration', './assets/styles/registrationForm.css')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()

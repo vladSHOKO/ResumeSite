@@ -4,6 +4,11 @@
 {% block stylesheets %}
     {{ encore_entry_link_tags('registration') }}
 {% endblock %}
+{% block javascripts %}
+
+    {{ encore_entry_script_tags('registration') }}
+
+{% endblock %}
 {% block body %}
     <div class="cosmic-registration">
         <div class="cosmic-registration-bg"></div>
@@ -18,30 +23,13 @@
                 <p>Создайте аккаунт и начните свое путешествие</p>
             </div>
 
-            <form class="cosmic-registration-form">
+            <form class="cosmic-registration-form" id="registration-form">
                 <div class="cosmic-form-grid">
                     <!-- Первая строка -->
-                    <div class="cosmic-form-group cosmic-float-animation">
-                        <div class="cosmic-input-container">
-                            <input type="text" id="cosmic-name" required>
-                            <label for="cosmic-name"><i class="fas fa-user"></i> Имя</label>
-                            <div class="cosmic-input-border"></div>
-                        </div>
-                    </div>
-
-                    <!-- Вторая строка -->
                     <div class="cosmic-form-group cosmic-float-animation" style="animation-delay: 0.2s;">
                         <div class="cosmic-input-container">
-                            <input type="email" id="cosmic-email" required>
-                            <label for="cosmic-email"><i class="fas fa-envelope"></i> Email</label>
-                            <div class="cosmic-input-border"></div>
-                        </div>
-                    </div>
-
-                    <div class="cosmic-form-group cosmic-float-animation" style="animation-delay: 0.3s;">
-                        <div class="cosmic-input-container">
-                            <input type="text" id="cosmic-username" required>
-                            <label for="cosmic-username"><i class="fas fa-at"></i> Логин</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
                             <div class="cosmic-input-border"></div>
                         </div>
                     </div>
@@ -49,8 +37,8 @@
                     <!-- Третья строка -->
                     <div class="cosmic-form-group cosmic-float-animation" style="animation-delay: 0.4s;">
                         <div class="cosmic-input-container">
-                            <input type="password" id="cosmic-password" required>
-                            <label for="cosmic-password"><i class="fas fa-lock"></i> Пароль</label>
+                            <input type="password" id="password" name="password" required>
+                            <label for="password"><i class="fas fa-lock"></i> Пароль</label>
                             <div class="cosmic-input-border"></div>
                         </div>
                     </div>
@@ -63,7 +51,7 @@
                 </button>
 
                 <div class="cosmic-login-link">
-                    Уже есть аккаунт? <a href="{{ path('app_authorization') }}">Войти в систему</a>
+                    Уже есть аккаунт? <a href="{{ path('app_login') }}">Войти в систему</a>
                 </div>
             </form>
         </div>
