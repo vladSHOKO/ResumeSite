@@ -1,0 +1,2 @@
+An exception occurred while executing a query: SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "uniq_identifier_email"
+DETAIL:  Key (email)=(kuzia_vladik@mail.ru) already exists.

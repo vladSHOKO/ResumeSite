@@ -17,7 +17,7 @@ registrationForm.addEventListener('submit', function(event) {
     })
         .then(response => response.json())
         .then(data => alert('Ответ сервера: ' + data))
-        .catch(error => console.log('Ошибка: '+ error));
+        .catch(error => alert('Ошибка: '+ error));
 
     event.target.reset();
 
